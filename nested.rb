@@ -1,3 +1,4 @@
+
 def hopper
 	programmer_hash =
  		{
@@ -88,15 +89,17 @@ def adding_matz
           :languages => ["C"]
         }
      }
-
-     programmer_hash[:yukihiro_matsumoto] = {
+     new_hash = {}
+     new_hash[:yukihiro_matsumoto] = {
         :known_for => "Ruby",
         :languages => ["LISP", "C"]
       }
-      return
-      programmer_hash
+      programmer_hash.each do |k, v|
+        new_hash[k] = v
+      end
 
-
+      programmer_hash = new_hash
+      return programmer_hash
 end
 
 def changing_alan
