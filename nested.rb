@@ -16,7 +16,7 @@ def hopper
         }
      }
   grace = programmer_hash[:grace_hopper]
-  return grace.
+  return grace.each {|key, value| return key, value} 
 
 end
 
