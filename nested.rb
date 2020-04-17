@@ -15,8 +15,7 @@ def hopper
           :languages => ["C"]
         }
      }
-  grace = programmer_hash[:grace_hopper]
-  return grace.select {|key, value| key, value} 
+ return programmer_hash[:grace_hopper].each {|k, v| k = v} 
 
 end
 
